@@ -1,0 +1,662 @@
+/* components/Cursos.css */
+.cursos-section {
+  padding: 5rem 1rem;
+  background: linear-gradient(135deg, #f9f7f4 0%, #f0ebe6 100%);
+  position: relative;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cursos-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.cursos-title {
+  font-family: var(--font-primary);
+  font-size: 2.5rem;
+  color: var(--forest-green);
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+}
+
+.cursos-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: var(--soft-green);
+  border-radius: 2px;
+}
+
+.cursos-subtitle {
+  font-family: var(--font-secondary);
+  font-size: 1.2rem;
+  color: var(--coffee);
+  max-width: 700px;
+  margin: 1.5rem auto 0;
+  line-height: 1.6;
+}
+
+.cursos-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.curso-card {
+  background: var(--white);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(42, 133, 82, 0.08);
+  border: 1px solid rgba(42, 133, 82, 0.1);
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+.curso-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 50px rgba(42, 133, 82, 0.12);
+}
+
+.curso-header {
+  padding: 2rem 2rem 1rem;
+  position: relative;
+}
+
+.curso-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: var(--white);
+}
+
+.curso-badge {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  background: var(--forest-green);
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 50px;
+  font-family: var(--font-secondary);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.curso-content {
+  padding: 0 2rem 2rem;
+}
+
+.curso-title {
+  font-family: var(--font-primary);
+  font-size: 1.6rem;
+  color: var(--forest-green);
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.curso-subtitle {
+  font-family: var(--font-secondary);
+  font-size: 1.1rem;
+  color: var(--coffee);
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.curso-description {
+  font-family: var(--font-secondary);
+  font-size: 1.05rem;
+  color: var(--coffee);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.curso-benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: var(--font-secondary);
+  color: var(--coffee);
+}
+
+.benefit-item i {
+  color: var(--soft-green);
+  font-size: 1.1rem;
+}
+
+.curso-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 1rem 1.5rem;
+  background: linear-gradient(135deg, var(--forest-green), var(--soft-green));
+  color: white;
+  text-decoration: none;
+  border-radius: 12px;
+  font-family: var(--font-primary);
+  font-weight: 600;
+  font-size: 1.1rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 1.5rem;
+}
+
+.curso-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(42, 133, 82, 0.2);
+}
+
+.curso-button i {
+  font-size: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.curso-button:hover i {
+  transform: translateX(5px);
+}
+
+.curso-footer {
+  text-align: center;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(42, 133, 82, 0.1);
+}
+
+.curso-footer small {
+  font-family: var(--font-secondary);
+  color: var(--gray);
+  font-size: 0.9rem;
+}
+
+.cursos-cta {
+  text-align: center;
+  padding: 2rem;
+  background: var(--white);
+  border-radius: 16px;
+  border: 1px solid rgba(42, 133, 82, 0.1);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cta-text {
+  font-family: var(--font-secondary);
+  font-size: 1.1rem;
+  color: var(--coffee);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* components/Cursos.css - ADICIONE estas novas regras */
+/* LINKS RÁPIDOS EM DESTAQUE */
+.links-rapidos {
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: var(--white);
+  border-radius: 16px;
+  border: 1px solid rgba(42, 133, 82, 0.1);
+  box-shadow: 0 10px 25px rgba(42, 133, 82, 0.05);
+}
+
+.links-title {
+  font-family: var(--font-primary);
+  font-size: 1.5rem;
+  color: var(--forest-green);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.links-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.link-rapido {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.link-rapido:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  border-color: white;
+}
+
+.link-rapido-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.link-icon {
+  font-size: 2rem;
+}
+
+.link-rapido h4 {
+  font-family: var(--font-primary);
+  font-size: 1.2rem;
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+}
+
+.link-rapido p {
+  font-family: var(--font-secondary);
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.link-rapido i {
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
+
+/* LINK DIRETO NO CARD */
+.curso-link-destaque {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background: rgba(42, 133, 82, 0.03);
+  border-radius: 10px;
+  border-left: 4px solid var(--forest-green);
+}
+
+.link-destaque {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: var(--forest-green);
+  font-family: var(--font-secondary);
+  font-weight: 600;
+}
+
+.link-destaque i {
+  font-size: 1.2rem;
+}
+
+.link-destaque span {
+  font-size: 1.05rem;
+}
+
+.link-destaque small {
+  margin-left: auto;
+  font-size: 0.85rem;
+  color: var(--gray);
+  font-weight: normal;
+}
+
+.url-curto {
+  font-family: monospace;
+  background: rgba(42, 133, 82, 0.05);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  color: var(--forest-green);
+}
+
+/* Mantenha todo o resto do CSS anterior e adicione: */
+
+@media (min-width: 768px) {
+  .links-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .link-destaque {
+    flex-wrap: wrap;
+  }
+  
+  .link-destaque small {
+    width: 100%;
+    margin-top: 0.5rem;
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .links-rapidos {
+    padding: 2.5rem;
+  }
+  
+  .links-title {
+    font-size: 1.7rem;
+  }
+}
+
+/* components/Cursos.css - ADICIONE estas regras no final */
+
+/* SEÇÃO DO E-BOOK */
+/* SEÇÃO DO E-BOOK - ATUALIZADA COM A PALETA */
+.ebook-section {
+  margin: var(--space-xl) 0;
+}
+
+.ebook-card {
+  background: linear-gradient(135deg, var(--cream) 0%, #F8F2E9 100%);
+  border-radius: var(--radius-lg);
+  border: 2px solid var(--gray-border);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+}
+
+.ebook-card:hover {
+  box-shadow: 0 12px 40px rgba(94, 48, 35, 0.15);
+  border-color: var(--creamel);
+}
+
+.ebook-header {
+  padding: var(--space-lg) var(--space-lg) var(--space-md);
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.ebook-icon {
+  width: 80px;
+  height: 80px;
+  background: var(--creamel);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  color: var(--cream);
+  box-shadow: var(--shadow-md);
+}
+
+.ebook-badge {
+  background: var(--creamel);
+  color: var(--cream);
+  padding: var(--space-xs) var(--space-md);
+  border-radius: 50px;
+  font-family: var(--font-secondary);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  border: 2px solid var(--coffee);
+}
+
+.ebook-content {
+  padding: 0 var(--space-lg) var(--space-lg);
+  flex: 1;
+}
+
+.ebook-title {
+  font-family: var(--font-primary);
+  font-size: 1.8rem;
+  color: var(--brownie);
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.ebook-subtitle {
+  font-family: var(--font-secondary);
+  font-size: 1.2rem;
+  color: var(--coffee);
+  margin-bottom: var(--space-md);
+  font-weight: 500;
+}
+
+.ebook-description {
+  font-family: var(--font-secondary);
+  font-size: 1.1rem;
+  color: var(--brownie);
+  line-height: 1.7;
+  margin-bottom: var(--space-md);
+}
+
+.ebook-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+
+.highlight-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--white);
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius-md);
+  font-family: var(--font-secondary);
+  color: var(--brownie);
+  font-weight: 500;
+  border: 1px solid var(--gray-border);
+  transition: var(--transition);
+}
+
+.highlight-item:hover {
+  border-color: var(--creamel);
+  transform: translateY(-2px);
+}
+
+.highlight-item i {
+  color: var(--creamel);
+  font-size: 1.1rem;
+}
+
+.ebook-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  padding: 1.25rem var(--space-md);
+  background: linear-gradient(135deg, var(--coffee), var(--creamel));
+  color: var(--cream);
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  font-family: var(--font-primary);
+  font-weight: 600;
+  font-size: 1.2rem;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: var(--transition);
+  margin-bottom: var(--space-md);
+}
+
+.ebook-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(137, 87, 55, 0.2);
+  border-color: var(--brownie);
+}
+
+.ebook-button i {
+  font-size: 1.3rem;
+}
+
+.ebook-note {
+  padding: var(--space-sm);
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: var(--radius-md);
+  border-left: 4px solid var(--coffee);
+}
+
+.ebook-note small {
+  font-family: var(--font-secondary);
+  color: var(--brownie);
+  font-size: 0.95rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.ebook-note i {
+  color: var(--creamel);
+  font-size: 1.1rem;
+  margin-top: 0.2rem;
+}
+
+.ebook-note strong {
+  color: var(--coffee);
+}
+
+/* RESPONSIVE PARA E-BOOK */
+@media (min-width: 768px) {
+  .ebook-header {
+    padding: var(--space-lg) var(--space-lg) var(--space-md);
+  }
+  
+  .ebook-content {
+    padding: 0 var(--space-lg) var(--space-lg);
+  }
+  
+  .ebook-title {
+    font-size: 2rem;
+  }
+  
+  .ebook-highlights {
+    gap: var(--space-md);
+  }
+}
+
+@media (min-width: 1024px) {
+  .ebook-card {
+    flex-direction: row;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  
+  .ebook-header {
+    flex-direction: column;
+    justify-content: center;
+    width: 320px;
+    padding: var(--space-xl) var(--space-lg);
+    border-right: 2px solid var(--gray-border);
+  }
+  
+  .ebook-icon {
+    width: 100px;
+    height: 100px;
+    font-size: 3rem;
+  }
+  
+  .ebook-badge {
+    margin-top: var(--space-sm);
+  }
+  
+  .ebook-content {
+    padding: var(--space-xl);
+    flex: 1;
+  }
+  
+  .ebook-title {
+    font-size: 2.2rem;
+  }
+  
+  .ebook-button {
+    width: auto;
+    min-width: 300px;
+    align-self: flex-start;
+  }
+}
+
+/* CORES ADICIONAIS - AJUSTE TAMBÉM PARA OS CARDS DOS CURSOS */
+:root {
+  --light-blue: #8DB9DC;      /* Ajustado para combinar com a paleta */
+  --light-purple: #B8A2C9;    /* Ajustado para combinar com a paleta */
+}
+
+/* AJUSTE NOS ÍCONES DOS CURSOS PARA COMBINAR */
+.curso-icon[style*="var(--light-blue)"] {
+  background-color: var(--light-blue) !important;
+}
+
+.curso-icon[style*="var(--light-purple)"] {
+  background-color: var(--light-purple) !important;
+}
+
+.curso-icon[style*="var(--soft-green)"] {
+  background-color: var(--creamel) !important; /* Usa o creamel no lugar do soft-green */
+}
+
+/* Se quiser manter consistência, substitua também no JSX as cores dos cursos */
+
+/* CORES PERSONALIZADAS */
+:root {
+  --light-blue: #4A90E2;
+  --light-purple: #9B6B9E;
+}
+
+/* RESPONSIVE */
+@media (min-width: 768px) {
+  .cursos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .curso-card:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cursos-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .curso-card:last-child:nth-child(odd) {
+    grid-column: auto;
+    max-width: none;
+  }
+  
+  .curso-title {
+    font-size: 1.7rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .cursos-grid {
+    gap: 3rem;
+  }
+  
+  .curso-card {
+    min-height: 650px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .curso-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .curso-description {
+    flex: 1;
+  }
+}
