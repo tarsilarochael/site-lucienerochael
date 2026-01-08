@@ -1,16 +1,17 @@
+// src/components/Header.jsx
 import React, { useState } from 'react';
-import { FiMenu, FiX } from 'react-icons/fi';
+import './Header.css';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const menuItems = [
-    { label: 'Início', href: '#inicio' },
-    { label: 'Sobre', href: '#sobre' },
-    { label: 'Serviços', href: '#sessoes' },
-    { label: 'Cursos', href: '#cursos' },
-    { label: 'Contato', href: '#contato' }
-  ];
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
 
   return (
     <header className="header">
@@ -18,63 +19,43 @@ const Header = () => {
         <div className="header-content">
           {/* Logo */}
           <div className="logo">
-            <h1>Luciene Rochael</h1>
-            <p>Psicóloga & Orientadora de Carreira</p>
+            <a href="#inicio">
+              <h1>Luciene Rochael</h1>
+              <p>Psicóloga Clínica</p>
+            </a>
           </div>
 
-          {/* Menu Desktop */}
+          {/* Desktop Navigation */}
           <nav className="nav-desktop">
             <ul>
-              {menuItems.map((item) => (
-                <li key={item.label}>
-                  <a href={item.href} className="nav-link">
-                    {item.label}
-                  </a>
-                </li>
-              ))}
+              <li><a href="#inicio">Início</a></li>
+              <li><a href="#sobre">Sobre</a></li>
+              <li><a href="#sessoes">Serviços</a></li>
+              <li><a href="#contato">Contato</a></li>
             </ul>
           </nav>
 
-          {/* Menu Mobile Toggle */}
+          {/* Mobile Menu Toggle */}
           <button 
-            className="menu-toggle"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="menu-toggle" 
+            onClick={toggleMenu}
+            aria-label="Menu"
           >
-            {isMenuOpen ? <FiX /> : <FiMenu />}
+            <i className={`fas ${isMenuOpen ? 'fa-times' : 'fa-bars'}`}></i>
           </button>
-        </div>
 
-        {/* Menu Mobile Dropdown */}
-        {isMenuOpen && (
-          <div style={{
-            position: 'absolute',
-            top: '100%',
-            left: 0,
-            right: 0,
-            background: 'var(--white)',
-            padding: '1rem',
-            boxShadow: '0 4px 20px rgba(0,0,0,0.1)',
-            zIndex: 1000
-          }}>
-            {menuItems.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                style={{
-                  display: 'block',
-                  padding: '1rem',
-                  color: 'var(--dark)',
-                  textAlign: 'center',
-                  borderBottom: '1px solid var(--gray-light)',
-                  textDecoration: 'none'
-                }}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {item.label}
-              </a>
-            ))}
+          {/* Mobile Navigation */}
+          <div className={`nav-mobile ${isMenuOpen ? 'active' : ''}`}>
+            <nav>
+              <ul>
+                <li><a href="#inicio" onClick={closeMenu}>Início</a></li>
+                <li><a href="#sobre" onClick={closeMenu}>Sobre</a></li>
+                <li><a href="#sessoes" onClick={closeMenu}>Serviços</a></li>
+                <li><a href="#contato" onClick={closeMenu}>Contato</a></li>
+              </ul>
+            </nav>
           </div>
-        )}
+        </div>
       </div>
     </header>
   );
