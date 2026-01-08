@@ -1,5 +1,4 @@
 import React from 'react';
-import { FiCalendar, FiBookOpen } from 'react-icons/fi';
 import foto1 from '../assets/foto1.jpeg'; 
 
 const Hero = () => {

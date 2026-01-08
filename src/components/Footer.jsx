@@ -1,5 +1,4 @@
 import React from 'react';
-import { FiMail, FiPhone, FiMapPin } from 'react-icons/fi';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
