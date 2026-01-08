@@ -47,7 +47,6 @@ plenamente.
                 className="btn btn-primary"
                 onClick={handleAgendarClick}
               >
-                <FiCalendar style={{ marginRight: '8px' }} />
                 Agendar Consultoria
               </button>
             </div>
