@@ -1,5 +1,5 @@
 import React from 'react';
-import foto2 from '../assets/foto2.jpeg';
+import foto4 from '../assets/foto4.jpeg';
 
 const Sobre = () => {
   return (
@@ -11,7 +11,7 @@ const Sobre = () => {
           
           {/* Foto à ESQUERDA (altura total) */}
           <div className="about-main-image">
-            <img src={foto2} alt="Luciene Rochael" className="about-photo-full" />
+            <img src={foto4} alt="Luciene Rochael" className="about-photo-full" />
           </div>
           
           {/* Título à DIREITA */}

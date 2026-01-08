@@ -1,6 +1,12 @@
-// components/Cursos.jsx - ATUALIZADO
 import React from 'react';
 import '../styles/Cursos.css';
+
+/* --- ÁREA DE IMPORTAÇÃO DAS IMAGENS (Pasta assets) --- */
+/* Certifique-se que os arquivos estão na pasta src/assets com ESSES nomes exatos */
+import icon1 from '../assets/icon1.jpeg'; 
+import icon2 from '../assets/icon2.jpeg'; 
+import icon3 from '../assets/icon3.jpeg';
+import fotoEbook from '../assets/foto2.jpeg'; 
 
 const Cursos = () => {
   const cursos = [
@@ -9,10 +15,9 @@ const Cursos = () => {
       titulo: "Oriente-se Desenhando sua Carreira",
       subtitulo: "Guia prático para encontrar sua direção profissional",
       descricao: "Um curso completo para quem busca redesenhar sua trajetória profissional com propósito e clareza. Aprenda a identificar seus talentos, definir objetivos e criar um plano de carreira alinhado com seus valores.",
-      icone: "🎯",
+      imagem: icon1, // Usando a variável importada lá em cima
       destaque: "Mais vendido",
       link: "https://hotmart.com/pt-br/marketplace/produtos/oriente-se-desenhando-sua-carreira/B82652345W",
-      cor: "var(--soft-green)",
       linkTexto: "Acessar página do curso"
     },
     {
@@ -20,10 +25,9 @@ const Cursos = () => {
       titulo: "Primeiros Passos na Gestão do Estresse",
       subtitulo: "Estratégias práticas para o dia a dia",
       descricao: "Aprenda técnicas eficazes de mindfulness e gestão emocional para transformar sua relação com o estresse. Desenvolva resiliência e encontre equilíbrio em meio às demandas da vida moderna.",
-      icone: "🧘‍♀️",
+      imagem: icon2, // Usando a variável importada (icon22.jpeg)
       destaque: "Novo",
       link: "https://go.hotmart.com/X86555189C",
-      cor: "var(--light-blue)",
       linkTexto: "Ver detalhes do programa"
     },
     {
@@ -31,10 +35,9 @@ const Cursos = () => {
       titulo: "Pacificando a Ansiedade",
       subtitulo: "Um caminho para a calma interior",
       descricao: "Curso transformador que combina terapia cognitivo-comportamental, mindfulness e técnicas de autorregulação emocional para ajudar você a desenvolver uma relação mais saudável com a ansiedade.",
-      icone: "🌊",
+      imagem: icon3, // Usando a variável importada
       destaque: "Em alta",
       link: "https://go.hotmart.com/R98989083X",
-      cor: "var(--light-purple)",
       linkTexto: "Conhecer o curso"
     }
   ];
@@ -43,10 +46,7 @@ const Cursos = () => {
     titulo: "E-book: Oriente-se Desenhando sua Carreira",
     subtitulo: "Guia para iniciar sua jornada profissional",
     descricao: "Este e-book oferece os primeiros passos essenciais para quem deseja repensar sua carreira. Com exercícios práticos e reflexões profundas, você começará a traçar um caminho mais alinhado com seus valores e aspirações.",
-    icone: "📖",
-    destaque: "",
     link: "https://go.hotmart.com/F82621141J",
-    cor: "var(--gold)",
     linkTexto: "Baixar e-book gratuito"
   };
 
@@ -65,9 +65,15 @@ const Cursos = () => {
           {cursos.map((curso) => (
             <div className="curso-card" key={curso.id}>
               <div className="curso-header">
-                <div className="curso-icon" style={{ backgroundColor: curso.cor }}>
-                  <span>{curso.icone}</span>
+                
+                <div className="curso-img-wrapper">
+                  <img 
+                    src={curso.imagem} 
+                    alt={`Imagem do curso ${curso.titulo}`} 
+                    className="curso-mini-foto" 
+                  />
                 </div>
+
                 {curso.destaque && (
                   <span className="curso-badge">{curso.destaque}</span>
                 )}
@@ -102,10 +108,6 @@ const Cursos = () => {
                     <i className="fas fa-check-circle"></i>
                     <span>Aulas gravadas</span>
                   </div>
-                  <div className="benefit-item">
-                    <i className="fas fa-check-circle"></i>
-                    <span>Certificado de conclusão</span>
-                  </div>
                 </div>
                 
                 <a 
@@ -129,11 +131,14 @@ const Cursos = () => {
         {/* SEÇÃO DO E-BOOK */}
         <div className="ebook-section">
           <div className="ebook-card">
+            
+            {/* IMAGEM DA CAPA DO EBOOK */}
             <div className="ebook-header">
-              <div className="ebook-icon">
-                <span>{ebook.icone}</span>
-              </div>
-              <div className="ebook-badge">{ebook.destaque}</div>
+              <img 
+                src={fotoEbook} 
+                alt="Capa do E-book Oriente-se" 
+                className="ebook-image" 
+              />
             </div>
             
             <div className="ebook-content">

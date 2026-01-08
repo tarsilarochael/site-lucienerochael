@@ -151,11 +151,11 @@
 }
 
 .social-title {
-  font-family: var(--font-primary);
+  font-family: var(--font-primary); /* Arrumei aqui (estava var(--coffee)) */
   font-size: 1.8rem;
-  color: var(--brownie);
+  color: #5e3023; /* Marrom escuro forte para ler bem */
   margin-bottom: var(--space-sm);
-  font-weight: 400;
+  font-weight: 600; /* Deixei um pouco mais negrito */
 }
 
 .social-description {
