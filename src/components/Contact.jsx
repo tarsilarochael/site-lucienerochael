@@ -1,6 +1,6 @@
 // Contact.jsx - VERSÃO SIMPLIFICADA E ALINHADA
 import React from 'react';
-import './Contact.css';
+import '../styles/Contact.css';
 
 const Contact = () => {
   return (

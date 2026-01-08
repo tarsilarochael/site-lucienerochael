@@ -1,6 +1,6 @@
 // components/Sessions.jsx
 import React from 'react';
-import './Sessions.css';
+import '../styles/Sessions.css';
 
 const Sessions = () => {
   const services = [

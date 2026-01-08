@@ -1,6 +1,6 @@
 // components/Cursos.jsx - ATUALIZADO
 import React from 'react';
-import './Cursos.css';
+import '../styles/Cursos.css';
 
 const Cursos = () => {
   const cursos = [
